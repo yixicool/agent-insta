@@ -1,0 +1,238 @@
+@import 'tailwindcss';
+
+/**
+ * 设计令牌。
+ *
+ * @theme 里的一份是浅色（默认），深色在下方按 [data-theme='dark'] 覆盖同名变量。
+ * 所有组件与图表都只引用 var(--color-*)，因此换主题不需要改任何组件。
+ *
+ * 正文与强调色在各自底色上均 ≥ WCAG AA（正文 4.5:1、非文本边界 3:1），
+ * 浅色实测：ink-strong 17.9:1、ink-body 10.4:1、ink-muted 6.1:1、
+ * accent 5.3:1、positive 5.0:1、caution 4.9:1、critical 6.5:1、info 7.1:1。
+ */
+@theme {
+  /* 背景层级：从页面底色到悬浮层 */
+  --color-surface-base: #f6f7fb;
+  --color-surface-raised: #ffffff;
+  --color-surface-overlay: #ffffff;
+  --color-surface-inset: #eef1f7;
+
+  /* 边框与分隔。line-strong 用于可交互边界，对白底 3.6:1 */
+  --color-line-subtle: #e2e8f0;
+  --color-line-strong: #7c8798;
+
+  --color-ink-strong: #0f172a;
+  --color-ink-body: #334155;
+  --color-ink-muted: #55637a;
+  --color-ink-inverse: #ffffff;
+
+  /* 品牌强调色 */
+  --color-accent: #0b6bcb;
+  --color-accent-strong: #075ba8;
+  --color-accent-soft: #dbeafe;
+
+  /* 语义色 */
+  --color-positive: #15803d;
+  --color-positive-soft: #dcfce7;
+  --color-caution: #a16207;
+  --color-caution-soft: #fef3c7;
+  --color-critical: #b91c1c;
+  --color-critical-soft: #fee2e2;
+  --color-info: #6d28d9;
+  --color-info-soft: #ede9fe;
+
+  /* 来源类型标识色，与文字标签配合使用，不单靠颜色传达信息 */
+  --color-source-official: #15803d;
+  --color-source-press: #0b6bcb;
+  --color-source-review: #a16207;
+  --color-source-community: #6d28d9;
+  --color-source-retailer: #55637a;
+
+  --radius-panel: 0.875rem;
+  --radius-control: 0.625rem;
+  --radius-pill: 999px;
+
+  /* 悬浮头部与卡片的层次阴影，深色主题下会调淡 */
+  --shadow-header: 0 8px 24px -12px rgb(15 23 42 / 0.28);
+  --shadow-card: 0 2px 10px -6px rgb(15 23 42 / 0.22);
+
+  --font-sans:
+    'Inter', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', system-ui, -apple-system,
+    sans-serif;
+  --font-mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+}
+
+/**
+ * 深色专业控制台。深色下 ink-body 对 surface-raised 约 12:1，ink-muted 约 5.4:1。
+ */
+[data-theme='dark'] {
+  --color-surface-base: #0b0f16;
+  --color-surface-raised: #131926;
+  --color-surface-overlay: #1a2233;
+  --color-surface-inset: #0e131d;
+
+  --color-line-subtle: #1f2937;
+  --color-line-strong: #334155;
+
+  --color-ink-strong: #f1f5f9;
+  --color-ink-body: #cbd5e1;
+  --color-ink-muted: #94a3b8;
+  --color-ink-inverse: #0b0f16;
+
+  --color-accent: #38bdf8;
+  --color-accent-strong: #0ea5e9;
+  --color-accent-soft: #0c4a6e;
+
+  --color-positive: #4ade80;
+  --color-positive-soft: #14532d;
+  --color-caution: #fbbf24;
+  --color-caution-soft: #713f12;
+  --color-critical: #f87171;
+  --color-critical-soft: #7f1d1d;
+  --color-info: #a78bfa;
+  --color-info-soft: #4c1d95;
+
+  --color-source-official: #4ade80;
+  --color-source-press: #38bdf8;
+  --color-source-review: #fbbf24;
+  --color-source-community: #a78bfa;
+  --color-source-retailer: #94a3b8;
+
+  --shadow-header: 0 8px 24px -12px rgb(0 0 0 / 0.7);
+  --shadow-card: 0 2px 10px -6px rgb(0 0 0 / 0.6);
+
+  color-scheme: dark;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--color-surface-base);
+    color: var(--color-ink-body);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--color-ink-strong);
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+  }
+
+  /* 统一可见焦点环，键盘导航必须始终看得见当前位置 */
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  /* 尊重系统的减少动效设置 */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  ::selection {
+    background-color: var(--color-accent-soft);
+    color: var(--color-ink-strong);
+  }
+}
+
+@layer components {
+  /* 全站统一的居中容器，头部与内容共用同一条视觉边界 */
+  .site-container {
+    width: 100%;
+    max-width: 72rem;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .site-container {
+      padding-inline: 1.5rem;
+    }
+  }
+
+  /* 悬浮胶囊头部：贴着视口顶部浮起，与内容之间留出呼吸 */
+  .app-header {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    padding-block: 0.5rem;
+  }
+
+  .app-header-shell {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border: 1px solid var(--color-line-subtle);
+    border-radius: var(--radius-pill);
+    background-color: color-mix(in srgb, var(--color-surface-raised) 88%, transparent);
+    box-shadow: var(--shadow-header);
+    backdrop-filter: blur(12px);
+    padding: 0.5rem 0.75rem;
+  }
+
+  /* 跨模块复用的面板容器 */
+  .panel {
+    background-color: var(--color-surface-raised);
+    border: 1px solid var(--color-line-subtle);
+    border-radius: var(--radius-panel);
+    box-shadow: var(--shadow-card);
+  }
+
+  /* 可点击的卡片：hover 时轻微抬升，主操作仍是卡内显式按钮 */
+  .panel-interactive {
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .panel-interactive:hover {
+    border-color: var(--color-line-strong);
+    box-shadow: 0 10px 24px -14px rgb(15 23 42 / 0.35);
+    transform: translateY(-2px);
+  }
+
+  /* 数值型表格：等宽字体便于纵向比对参数 */
+  .numeric {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* 键盘可达的跳转链接，仅在获得焦点时显现 */
+  .skip-link {
+    position: absolute;
+    left: 0.75rem;
+    top: -3rem;
+    z-index: 50;
+    padding: 0.5rem 0.875rem;
+    background-color: var(--color-accent);
+    color: var(--color-ink-inverse);
+    border-radius: var(--radius-control);
+    font-weight: 600;
+    transition: top 0.15s ease-in-out;
+  }
+
+  .skip-link:focus {
+    top: 0.75rem;
+  }
+}
