@@ -4,7 +4,7 @@ import type { SceneArtKey } from '../types/play';
 /**
  * 玩法卡的场景图片。
  *
- * 使用品牌官方营销照片展示真实拍摄效果；图片存放于 public/image/products/，
+ * 使用品牌官方营销照片展示真实拍摄效果，托管于外部图床，
  * 版权归各品牌所有，详见 src/data/image-credits.ts。
  *
  * 图片通过 object-fit: cover 保证卡片内高度一致，避免因原始比例不同导致参差。
@@ -21,6 +21,20 @@ const IMAGE_ALT: Readonly<Record<SceneArtKey, string>> = {
   trail: '越野跑拍摄场景',
   cinema: '电影感画幅拍摄场景',
   telemetry: '数据叠加拍摄场景',
+};
+
+/** 场景图片的图床 URL，版权登记见 src/data/image-credits.ts */
+export const SCENE_ART_URLS: Readonly<Record<SceneArtKey, string>> = {
+  'night-road': 'https://pic1.imgdb.cn/i/0349i1NAqh66OhafIEaSaD.jpg',
+  'dual-format': 'https://pic1.imgdb.cn/i/0349i1Jqy6MIOCqVrHShjP.jpg',
+  panorama: 'https://pic1.imgdb.cn/i/0349i1H8EZG3uklP2t2tYD.jpg',
+  wearable: 'https://pic1.imgdb.cn/i/0349i1bS463ZKk0ZoDtOHs.jpg',
+  'snow-glare': 'https://pic1.imgdb.cn/i/0349i1HVQrgXIJRZHziVOU.jpg',
+  underwater: 'https://pic1.imgdb.cn/i/0349i1SEFIyOjuRWBAL1p0.jpg',
+  touring: 'https://pic1.imgdb.cn/i/0349i1LcvhHP7eT4po2HW3.jpg',
+  trail: 'https://pic1.imgdb.cn/i/0349i1NZDfQMsqozPgUnGz.jpg',
+  cinema: 'https://pic1.imgdb.cn/i/0349i1HkFVsc0LfbJcNKne.jpg',
+  telemetry: 'https://pic1.imgdb.cn/i/0349i1ICcEa3HRQnd9ICK7.jpg',
 };
 
 /** 已实现场景图片的形态键，供数据完整性测试核对玩法数据 */
@@ -46,7 +60,7 @@ export interface SceneArtProps {
 export function SceneArt({ artKey, className = 'h-28 w-full' }: SceneArtProps): ReactNode {
   return (
     <img
-      src={`/image/products/${artKey}.jpg`}
+      src={SCENE_ART_URLS[artKey]}
       alt={IMAGE_ALT[artKey]}
       role="img"
       className={`block rounded-[var(--radius-control)] object-cover ${className}`}

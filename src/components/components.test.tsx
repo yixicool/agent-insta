@@ -8,7 +8,7 @@ import { Term } from './Glossary';
 import { GuideSubNav } from './GuideSubNav';
 import { OverviewStats } from './Overview';
 import { ProductPhoto } from './ProductPhoto';
-import { SCENE_ART_KEYS, SceneArt } from './SceneArt';
+import { SCENE_ART_KEYS, SCENE_ART_URLS, SceneArt } from './SceneArt';
 import { UploadPlayCard, UserPlayCard } from './UserPlays';
 import { COMPETITOR_MODELS } from '../data/competitors';
 import { GENERAL_WORDING } from '../lib/wording';
@@ -114,7 +114,7 @@ describe('SceneArt', () => {
     render(<SceneArt artKey="night-road" />);
     const image = screen.getByRole('img');
     expect(image).toHaveAccessibleName(/夜间道路拍摄场景/);
-    expect(image).toHaveAttribute('src', '/image/products/night-road.jpg');
+    expect(image).toHaveAttribute('src', SCENE_ART_URLS['night-road']);
   });
 
   it('每个已声明的形态键都能渲染出图片', () => {
@@ -122,7 +122,7 @@ describe('SceneArt', () => {
       const { unmount } = render(<SceneArt artKey={key} />);
       const image = screen.getByRole('img');
       expect(image).toBeInTheDocument();
-      expect(image).toHaveAttribute('src', `/image/products/${key}.jpg`);
+      expect(image).toHaveAttribute('src', SCENE_ART_URLS[key]);
       unmount();
     }
   });

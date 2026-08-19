@@ -87,7 +87,7 @@ export interface CompetitorModel {
   readonly targetAudiences: readonly AudienceId[];
   readonly strengths: readonly Sourced<string>[];
   readonly weaknesses: readonly Sourced<string>[];
-  /** public/images/products 下的相对路径；缺图时为 null */
+  /** 图床完整 URL；缺图时为 null */
   readonly imagePath: string | null;
   /** 归一化到 0-100 的能力评分，由数据编者依据实测与规格给出并附来源 */
   readonly capabilities: Readonly<Record<CapabilityDimension, Sourced<number>>>;

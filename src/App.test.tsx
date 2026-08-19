@@ -126,7 +126,7 @@ describe('第一步：看能拍什么', () => {
     const images = screen.getAllByRole('img');
     expect(images.length).toBeGreaterThan(0);
     expect(images[0]).toHaveAccessibleName(/拍摄场景/);
-    expect(images[0]).toHaveAttribute('src', expect.stringMatching(/^\/image\/products\/.+\.jpg$/));
+    expect(images[0]).toHaveAttribute('src', expect.stringMatching(/^https:\/\/.+\.jpg$/));
   });
 
   it('每个玩法都标出现在哪台机型最拍得动它', async () => {

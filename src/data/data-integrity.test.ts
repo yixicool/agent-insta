@@ -8,7 +8,7 @@ import {
   FORM_FACTOR_LABELS,
 } from '../types/competitor';
 import { PLAY_EFFORT_LABELS } from '../types/play';
-import { SCENE_ART_KEYS } from '../components/SceneArt';
+import { SCENE_ART_KEYS, SCENE_ART_URLS } from '../components/SceneArt';
 import { RADAR_CATEGORY_LABELS, RADAR_RING_LABELS } from '../types/tech-radar';
 import { UNDISCLOSED, type Sourced } from '../types/provenance';
 import { AUDIENCE_SCENARIOS } from './audiences';
@@ -162,9 +162,7 @@ describe('竞品数据集完整性', () => {
       }
       const credit = PRODUCT_IMAGE_CREDITS.find((item) => item.modelId === model.id);
       expect(credit, `${model.id} 的 imagePath 缺少版权登记`).toBeDefined();
-      expect(model.imagePath, `${model.id} 的 imagePath 与登记的文件名不一致`).toBe(
-        `/images/products/${credit?.filename}`,
-      );
+      expect(isHttpUrl(model.imagePath), `${model.id} 的 imagePath 不是合法的图床 URL`).toBe(true);
     }
   });
 
@@ -195,6 +193,7 @@ describe('竞品数据集完整性', () => {
     const registeredKeys = new Set(IMAGE_CREDITS.map((c) => c.key));
     for (const key of SCENE_ART_KEYS) {
       expect(registeredKeys.has(key), `场景 ${key} 缺少版权登记`).toBe(true);
+      expect(isHttpUrl(SCENE_ART_URLS[key]), `场景 ${key} 的图床 URL 不合法`).toBe(true);
     }
   });
 });

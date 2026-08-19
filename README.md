@@ -52,9 +52,9 @@ npm run verify       # 格式检查 + 类型检查 + 测试 + 构建，交付前
 
 ## 产品图片版权
 
-首页玩法卡使用真实的品牌官方营销素材（`src/components/SceneArt.tsx`，10 种场景，图片存于 `public/image/products/`，版权归各品牌所有，登记在 `src/data/image-credits.ts` 的 `IMAGE_CREDITS`）。
+首页玩法卡使用真实的品牌官方营销素材（`src/components/SceneArt.tsx`，10 种场景，图片托管于外部图床，URL 登记在 `SCENE_ART_URLS`，版权归各品牌所有，另在 `src/data/image-credits.ts` 的 `IMAGE_CREDITS` 登记版权归属与用途）。
 
-竞品卡片与机型详情页的产品图（`src/components/ProductPhoto.tsx`）展示各品牌官网产品页的真实产品图：机型的 `imagePath` 非空时优先渲染该图片，未登记或图片加载失败时自动退回自绘 SVG 形态示意图，任何时刻都不会出现破图或死链。9 款在售机型均已收录官方产品图，存于 `public/images/products/`（注意与场景图目录 `public/image/products/` 不是同一处），登记在 `src/data/image-credits.ts` 的 `PRODUCT_IMAGE_CREDITS`（版权归属与官网来源链接），`data-integrity` 测试会校验每个非空 `imagePath` 都已登记版权。补充或更换图片的流程写在该文件顶部的注释里。图片版权归各品牌所有，仅可用于内部产品分析的识别性展示。
+竞品卡片与机型详情页的产品图（`src/components/ProductPhoto.tsx`）展示各品牌官网产品页的真实产品图：机型的 `imagePath` 非空时优先渲染该图片，未登记或图片加载失败时自动退回自绘 SVG 形态示意图，任何时刻都不会出现破图或死链。9 款在售机型均已收录官方产品图，图片托管于外部图床，`imagePath` 即为图床 URL，登记在 `src/data/image-credits.ts` 的 `PRODUCT_IMAGE_CREDITS`（版权归属与官网来源链接），`data-integrity` 测试会校验每个非空 `imagePath` 都已登记版权且是合法 URL。补充或更换图片的流程写在该文件顶部的注释里。图片版权归各品牌所有，仅可用于内部产品分析的识别性展示。
 
 ## 阅读体验设计
 
