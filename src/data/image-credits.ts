@@ -2,16 +2,15 @@ import type { SceneArtKey } from '../types/play';
 
 /**
  * 图片版权声明：场景插画（玩法卡背景）与机型产品图两套素材，
- * 语义不同，登记结构分开，互不影响。
+ * 语义不同，登记结构分开，互不影响。均托管于外部图床。
  *
  * 场景图片均来自品牌官方营销素材，版权归各品牌所有，
  * 本项目仅用于非商业性产品选型参考，不对图片进行二次加工或商业使用。
  *
  * 机型产品图均来自各品牌官网产品页，版权归各品牌所有，不逐张标注具体采集日期。
- * 新增图片时：图片存入 `public/images/products/`（复数 images，与场景图的
- * `public/image/products/` 单数目录不是同一处，不要混用），在
- * `src/data/competitors.ts` 把对应机型的 `imagePath` 从 `null` 改成实际路径，
- * 并在下方 `PRODUCT_IMAGE_CREDITS` 补一条登记。
+ * 新增图片时：把图床 URL 填入 `src/components/SceneArt.tsx` 的 `SCENE_ART_URLS`
+ * （场景图）或 `src/data/competitors.ts` 对应机型的 `imagePath`（产品图，从
+ * `null` 改成实际 URL），并在下方补一条登记。
  */
 
 export interface ImageCredit {

@@ -124,7 +124,7 @@ export const COMPETITOR_MODELS: readonly CompetitorModel[] = [
       ]),
       sourced('官方未公开裸机重量，便携性难以与竞品做同口径比较。', [DJI_ACTION_6_PRODUCT]),
     ],
-    imagePath: '/images/products/dji-osmo-action-6.png',
+    imagePath: 'https://pic1.imgdb.cn/i/0349i6NRfdIm4u9xUgGKF7.png',
     capabilities: {
       lowLight: sourced(
         92,
@@ -199,7 +199,7 @@ export const COMPETITOR_MODELS: readonly CompetitorModel[] = [
         BH_OSMO_360,
       ]),
     ],
-    imagePath: '/images/products/dji-osmo-360.png',
+    imagePath: 'https://pic1.imgdb.cn/i/0349i6NNBdmYlAFwmP1ASX.png',
     capabilities: {
       lowLight: sourced(
         88,
@@ -281,7 +281,7 @@ export const COMPETITOR_MODELS: readonly CompetitorModel[] = [
       ]),
       sourced('官方未给出防水米数等级，仅以使用限制描述，水下场景需谨慎。', [DJI_NANO_SUPPORT]),
     ],
-    imagePath: '/images/products/dji-osmo-nano.png',
+    imagePath: 'https://pic1.imgdb.cn/i/0349i6NIbbd9xWLkfdLH2b.png',
     capabilities: {
       lowLight: sourced(78, [DPREVIEW_OSMO_NANO], '1/1.3 英寸在拇指形态中领先，但小于旗舰方块机。'),
       stabilization: sourced(
@@ -352,7 +352,7 @@ export const COMPETITOR_MODELS: readonly CompetitorModel[] = [
       sourced('无机内存储，必须配 microSD 卡才能拍摄。', [INSTA360_ACE_PRO_2_PRODUCT]),
       sourced('后继 Ace Pro 3 已过预期发布窗口仍未官宣，产品周期偏长。', [REDSHARK_SUMMER_2026]),
     ],
-    imagePath: '/images/products/insta360-ace-pro-2.png',
+    imagePath: 'https://pic1.imgdb.cn/i/0349i6RlqFdOnNKNazzUJ6.png',
     capabilities: {
       lowLight: sourced(
         86,
@@ -416,7 +416,7 @@ export const COMPETITOR_MODELS: readonly CompetitorModel[] = [
       sourced('约 200g 重量高于方块形运动相机，头盔与胸带佩戴负担更大。', [INSTA360_X5_PRESS]),
       sourced('360 素材需后期重构导出，工作流比单镜头更重。', [PCMAG_BEST_ACTION_CAMERAS]),
     ],
-    imagePath: '/images/products/insta360-x5.png',
+    imagePath: 'https://pic1.imgdb.cn/i/0349i6VPPDZ03Fy7kf3knD.png',
     capabilities: {
       lowLight: sourced(
         84,
@@ -493,7 +493,7 @@ export const COMPETITOR_MODELS: readonly CompetitorModel[] = [
       sourced('定价接近旗舰方块机，性价比受质疑。', [TOMSGUIDE_GO_ULTRA]),
       sourced('拇指形态在弱光下照片表现接近手机水平。', [TOMSGUIDE_GO_ULTRA]),
     ],
-    imagePath: '/images/products/insta360-go-ultra.png',
+    imagePath: 'https://pic1.imgdb.cn/i/0349i6RK3e4FVCGiHjrt2v.png',
     capabilities: {
       lowLight: sourced(
         72,
@@ -585,7 +585,7 @@ export const COMPETITOR_MODELS: readonly CompetitorModel[] = [
         DIGITALCAMERAWORLD_MISSION_1,
       ]),
     ],
-    imagePath: '/images/products/gopro-mission-1-pro.png',
+    imagePath: 'https://pic1.imgdb.cn/i/0349i6NuoZlIi1Sdw91F2R.png',
     capabilities: {
       lowLight: sourced(
         95,
@@ -671,7 +671,7 @@ export const COMPETITOR_MODELS: readonly CompetitorModel[] = [
       sourced('不具备 PRO 型号的 8K open-gate 能力。', [DPREVIEW_MISSION_PRO_ILS]),
       sourced('官方未公开防水等级与重量。', [GOPRO_MISSION_1_STORE]),
     ],
-    imagePath: '/images/products/gopro-mission-1.png',
+    imagePath: 'https://pic1.imgdb.cn/i/0349i6P4r4o7PVJkGpUmsc.png',
     capabilities: {
       lowLight: sourced(93, [GOPRO_MISSION_1_ANNOUNCE], '与 PRO 同传感器，规格上限略低。'),
       stabilization: sourced(90, [GOPRO_MISSION_1_STORE]),
@@ -735,7 +735,7 @@ export const COMPETITOR_MODELS: readonly CompetitorModel[] = [
       sourced('社区反馈发热明显，长时间连续录制受限。', [REDDIT_HERO13_THREADS]),
       sourced('已被 MISSION 1 系列取代旗舰定位，转为中端产品。', [GOPRO_MISSION_1_PRICING]),
     ],
-    imagePath: '/images/products/gopro-hero13-black.png',
+    imagePath: 'https://pic1.imgdb.cn/i/0349i6NvJ2A5dQT3kmYwdA.png',
     capabilities: {
       lowLight: sourced(66, [GOPRO_HERO13_SPECS], '1/1.9 英寸为本矩阵中较小传感器。'),
       stabilization: sourced(93, [GOPRO_HERO13_SPECS], 'HyperSmooth 6.0 是被广泛认可的防抖标杆。'),
