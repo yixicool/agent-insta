@@ -76,6 +76,48 @@ export const DJI_NANO_STORE = official(
   'https://www.djiusa.com/products/osmo-nano-standard-combo-128gb',
 );
 
+export const DJI_POCKET_3_PRESS = pressRelease(
+  'DJI 官方新闻稿',
+  'DJI Releases the Osmo Pocket 3 for Moving Moments with Unparalleled Precision',
+  'https://www.dji.com/newsroom/news/dji-releases-the-osmo-pocket-3-for-moving-moments-with-unparalleled-precision-en',
+);
+
+export const DJI_POCKET_3_PRESS_JP = pressRelease(
+  'DJI 官方新闻稿（日本）',
+  'DJI、ストーリーが動き出す瞬間を確実に捉えるOsmo Pocket 3を発表',
+  'https://www.dji.com/jp/newsroom/news/dji-releases-the-osmo-pocket-3-for-moving-moments-with-unparalleled-precision-jp',
+);
+
+export const DJI_POCKET_3_STORE = official(
+  'DJI 官方商城',
+  '1" CMOS Pocket Vlogging Camera — Osmo Pocket 3',
+  'https://store.dji.com/product/osmo-pocket-3',
+);
+
+export const DJI_POCKET_3_FAQ = official(
+  'DJI 官方',
+  'Osmo Pocket 3 FAQ',
+  'https://www.dji.com/osmo-pocket-3/faq',
+);
+
+export const DJI_POCKET_3_SUPPORT = official(
+  'DJI 官方支持',
+  'Support for Osmo Pocket 3（规格：重量、存储卡）',
+  'https://www.dji.com/support/product/osmo-pocket-3',
+);
+
+export const PCMAG_POCKET_3 = review(
+  'PCMag',
+  'DJI Osmo Pocket 3 Review',
+  'https://www.pcmag.com/reviews/dji-osmo-pocket-3',
+);
+
+export const CINED_POCKET_3 = review(
+  'CineD',
+  'DJI Osmo Pocket 3 Released — Rotatable OLED Touchscreen, 1-inch Type Sensor, 4K 120fps, 10-Bit D-Log M',
+  'https://www.cined.com/dji-osmo-pocket-3-released-rotatable-oled-touchscreen-1-inch-type-sensor-4k-120fps-10-bit-d-log-m-and-more/',
+);
+
 // ── 影石 Insta360 ───────────────────────────────────────────────────────────
 
 export const INSTA360_ACE_PRO_2_PRODUCT = official(
@@ -132,6 +174,114 @@ export const INSTA360_GO_ULTRA_FAQ = official(
   'https://www.insta360.com/blog/tips/insta360-go-ultra-faq.html',
 );
 
+export const INSTA360_GO_3S_PRODUCT = official(
+  'Insta360 官方',
+  'Insta360 GO 3S — Tiny 4K Camera',
+  'https://www.insta360.com/product/insta360-go3s',
+);
+
+export const INSTA360_GO_3S_STORE = official(
+  'Insta360 官方商城',
+  'Buy GO 3S Standalone Camera（含存储与规格说明）',
+  'https://store.insta360.com/product/go-3s-standalone-camera',
+);
+
+export const INSTA360_GO_3S_KIT_STORE = official(
+  'Insta360 官方商城',
+  'Insta360 GO 3S 套装购买页',
+  'https://store.insta360.com/product/go-3s',
+);
+
+export const INSTA360_GO_SERIES_SPECS = official(
+  'Insta360 官方支持中心',
+  'Insta360 GO Series Specifications Overview（GO 系列规格与发布信息汇总）',
+  'https://insta360eu.zendesk.com/hc/en-us/articles/35792565365010-Insta360-GO-Series-Specifications-Overview',
+);
+
+export const INSTA360_GO_3S_RETRO_BLOG = official(
+  'Insta360 官方',
+  'New Insta360 GO 3S Retro Bundle Turns the Tiny POV Camera Into a Film-Inspired Street Camera',
+  'https://www.insta360.com/blog/news/go3s-retro-bundle-pov-camera.html',
+);
+
+export const REDSHARK_GO_3S = review(
+  'RedShark News',
+  'Insta360 GO 3S announced with significant 4K resolution boost',
+  'https://www.redsharknews.com/insta360-go-3s-announced-significant-4k-resolution-boost',
+);
+
+export const INSTA360_GO_3S_FAQ = official(
+  'Insta360 官方',
+  'Insta360 GO 3S: Everything You Need to Know',
+  'https://www.insta360.com/blog/tips/insta360-go-3s-faq.html',
+);
+
+export const INSTA360_GO_3S_WATERPROOF_MANUAL = official(
+  'Insta360 官方在线手册',
+  'Insta360 GO 3S — Waterproofing',
+  'https://onlinemanual.insta360.com/go3s/en-us/faq/specs/waterproof',
+);
+
+export const DRONEDJ_GO_3S_ANNOUNCE = review(
+  'DroneDJ',
+  'Insta360 GO 3S: Unboxing and first impressions',
+  'https://dronedj.com/2024/06/13/insta360-go-3s-unboxing-and-first-impressions/',
+);
+
+export const NEWSSHOOTER_GO_3S_ANNOUNCE = review(
+  'Newsshooter',
+  'Insta360 GO 3S',
+  'https://www.newsshooter.com/2024/06/13/insta360-go-3s/',
+);
+
+export const PCMAG_GO_3S_REVIEW = review(
+  'PCMag',
+  'Insta360 Go 3S',
+  'https://ca.pcmag.com/cameras/1551/insta360-go-3s',
+);
+
+export const TOMSGUIDE_GO_3S_REVIEW = review(
+  "Tom's Guide",
+  'Insta360 Go 3S review',
+  'https://www.tomsguide.com/cameras-photography/gopro-action-cameras/insta360-go-3s-review',
+);
+
+export const INSTA360_LUNA_ULTRA_PRODUCT = official(
+  'Insta360 官方',
+  'Insta360 Luna Ultra — Flagship Dual-Lens Gimbal Camera',
+  'https://www.insta360.com/product/insta360-luna-ultra',
+);
+
+export const INSTA360_LUNA_ULTRA_PRESS = pressRelease(
+  'Insta360 官方新闻稿',
+  'Insta360 Launches Luna Ultra: Leica Co-Engineered Gimbal Camera Built for Next-Generation Mobile Filmmaking',
+  'https://www.prnewswire.com/news-releases/insta360-launches-luna-ultra-leica-co-engineered-gimbal-camera-built-for-next-generation-mobile-filmmaking-302796602.html',
+);
+
+export const INSTA360_LUNA_ULTRA_BLOG = official(
+  'Insta360 官方',
+  'Luna Ultra: Leica Co-Engineered Gimbal Built for Next-Gen Mobile Filmmaking',
+  'https://www.insta360.com/blog/insta360-launches-luna-series-gimbal-cameras-Leica.html',
+);
+
+export const INSTA360_LUNA_ULTRA_SPECS_MANUAL = official(
+  'Insta360 官方在线手册',
+  'Insta360 lunaultra Specs — Luna Ultra',
+  'http://onlinemanual.insta360.com/lunaultra/en-us/specs/specs',
+);
+
+export const PETAPIXEL_LUNA_ULTRA = review(
+  'PetaPixel',
+  'Luna Ultra: Insta360 Finally Reveals Full Details of the Leica-Branded Gimbal Camera',
+  'https://petapixel.com/2026/06/10/luna-ultra-insta360-finally-reveals-full-details-of-the-leica-branded-gimbal-camera/',
+);
+
+export const ENGADGET_LUNA_ULTRA = review(
+  'Engadget',
+  "Insta360's Luna Ultra Takes On DJI's Osmo Pocket Gimbal Cameras",
+  'https://www.engadget.com/2191160/insta360-luna-ultra-gimbal-camera/',
+);
+
 // ── GoPro ───────────────────────────────────────────────────────────────────
 
 export const GOPRO_MISSION_1_ANNOUNCE = pressRelease(
@@ -174,6 +324,54 @@ export const GOPRO_HERO13_ANNOUNCE = pressRelease(
   'GoPro 官方新闻',
   'GoPro Announces the $399 HERO13 Black and the $199 HERO',
   'https://gopro.com/en/ca/news/gopro-announces-hero13-black-and-tiny-hero-camera',
+);
+
+export const GOPRO_MAX2_ANNOUNCE = pressRelease(
+  'GoPro 官方新闻',
+  'Announcing Three New Products — MAX2、LIT HERO、Fluid Pro AI',
+  'https://gopro.com/en/us/news/announcing-three-new-products',
+);
+
+export const GOPRO_MAX2_ANNOUNCE_PRESS = pressRelease(
+  'GoPro 投资者关系',
+  'GoPro Announces Three New Products — MAX2: 360 Camera with True 8K Resolution and Twist-and-Go Replaceable Lenses',
+  'https://www.prnewswire.com/news-releases/gopro-announces-three-new-products--max2-360-camera-with-true-8k-resolution-and-twist-and-go-replaceable-lenses-lit-hero-miniature-4k-lifestyle-camera-with-built-in-light-for-whatever-whenever-capture-and-fluid-pro-ai-gim-302564190.html',
+);
+
+export const GOPRO_MAX2_SPECS = official(
+  'GoPro 官方',
+  'MAX2 Specs（CHDHZ-311）',
+  'https://gopro.com/en/us/shop/cameras/buy/max2/CHDHZ-311-master.html?tab=tech-specs',
+);
+
+export const GOPRO_MAX2_FIRMWARE_PRESS = pressRelease(
+  'GoPro 投资者关系',
+  'GoPro Elevates Award-Winning MAX2 360 Camera Image Quality with Powerful New Firmware Update',
+  'https://investor.gopro.com/press-releases/press-release-details/2026/GoPro-Elevates-Award-Winning-MAX2-360-Camera-Image-Quality-with-Powerful-New-Firmware-Update/default.aspx',
+);
+
+export const GOPRO_MAX2_AWARDS_PRESS = pressRelease(
+  'GoPro 投资者关系',
+  'GoPro MAX2 360 Camera Wins Top Industry Awards for Groundbreaking 360 Innovations',
+  'https://investor.gopro.com/press-releases/press-release-details/2025/GoPro-MAX2-360-Camera-Wins-Top-Industry-Awards-for-Groundbreaking-360-Innovations/default.aspx',
+);
+
+export const DPREVIEW_MAX2 = review(
+  'DPReview',
+  "GoPro's back in the 360 camera game, and says its 8K is better than everyone else's",
+  'https://www.dpreview.com/news/4432596926/gopro-s-back-in-the-360-camera-game-and-says-its-8k-is-better-than-everyone-else-s/',
+);
+
+export const TOMSGUIDE_MAX2 = review(
+  "Tom's Guide",
+  'GoPro MAX2 review',
+  'https://www.tomsguide.com/cameras-photography/gopro-action-cameras/gopro-max2-review',
+);
+
+export const CYCLINGWEEKLY_MAX2 = review(
+  'Cycling Weekly',
+  'GoPro MAX2 Review: GoPro comes back in to the 360˚ camera market with a bang',
+  'https://www.cyclingweekly.com/reviews/action-cameras/gopro-max2-review-gopro-comes-back-in-to-the-360-camera-market-with-a-bang',
 );
 
 // ── 第三方专业评测 ──────────────────────────────────────────────────────────
@@ -386,4 +584,28 @@ export const GOPRO_HERO13_CN_PRICE = cnyPrice(
   '京东/天猫/GoPro官网',
   'GoPro HERO13 Black 中国市场价格',
   'https://gopro.com/zh-cn/shop/cameras/hero13-black',
+);
+
+export const DJI_POCKET_3_CN_PRICE = cnyPrice(
+  '京东/天猫/DJI官网',
+  'DJI Osmo Pocket 3 中国市场价格',
+  'https://store.dji.com/cn/product/osmo-pocket-3',
+);
+
+export const INSTA360_LUNA_ULTRA_CN_PRICE = cnyPrice(
+  '京东/天猫/Insta360官网',
+  'Insta360 Luna Ultra 中国市场价格',
+  'https://www.insta360.com/cn/product/insta360-luna-ultra',
+);
+
+export const INSTA360_GO_3S_CN_PRICE = cnyPrice(
+  '京东/天猫/Insta360官网',
+  'Insta360 GO 3S 中国市场价格',
+  'https://www.insta360.com/cn/product/insta360-go3s',
+);
+
+export const GOPRO_MAX2_CN_PRICE = cnyPrice(
+  '京东/天猫/GoPro官网',
+  'GoPro MAX2 中国市场价格',
+  'https://gopro.com/zh-cn/shop/cameras/max2',
 );

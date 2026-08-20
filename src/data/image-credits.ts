@@ -155,6 +155,30 @@ export const PRODUCT_IMAGE_CREDITS: readonly ProductImageCredit[] = [
     sourceUrl:
       'https://gopro.com/en/do/shop/cameras/buy/hero13black/CHDHX-131-master.html?tab=tech-specs',
   },
+  {
+    modelId: 'dji-osmo-pocket-3',
+    filename: 'dji-osmo-pocket-3.png',
+    copyright: 'DJI',
+    sourceUrl: 'https://store.dji.com/product/osmo-pocket-3',
+  },
+  {
+    modelId: 'insta360-luna-ultra',
+    filename: 'insta360-luna-ultra.png',
+    copyright: 'Insta360',
+    sourceUrl: 'https://www.insta360.com/product/insta360-luna-ultra',
+  },
+  {
+    modelId: 'insta360-go-3s',
+    filename: 'insta360-go-3s.png',
+    copyright: 'Insta360',
+    sourceUrl: 'https://www.insta360.com/product/insta360-go3s',
+  },
+  {
+    modelId: 'gopro-max2',
+    filename: 'gopro-max2.png',
+    copyright: 'GoPro',
+    sourceUrl: 'https://gopro.com/en/us/shop/cameras/buy/max2/CHDHZ-311-master.html?tab=tech-specs',
+  },
 ];
 
 /** 页脚统一版权声明文本 */

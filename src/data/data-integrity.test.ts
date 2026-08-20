@@ -71,9 +71,9 @@ function supportingFields(
 }
 
 describe('竞品数据集完整性', () => {
-  it('包含 8-12 款主力在售机型', () => {
+  it('包含 8-16 款主力在售机型', () => {
     expect(COMPETITOR_MODELS.length).toBeGreaterThanOrEqual(8);
-    expect(COMPETITOR_MODELS.length).toBeLessThanOrEqual(12);
+    expect(COMPETITOR_MODELS.length).toBeLessThanOrEqual(16);
   });
 
   it('覆盖大疆、影石、GoPro 三大品牌', () => {
